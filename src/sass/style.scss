@@ -1,0 +1,317 @@
+@import 'smart-grid.scss';
+
+.wrapper {
+    // border: 1px solid black;
+    @include wrapper();
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include xs-block() {
+        justify-content: space-around;
+        div {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        .buttons {
+            display: none;
+        }
+        .burger {
+            margin-top: 20px;
+            display: block;
+        }
+    }
+}
+
+.logo {
+    margin-top: 20px;
+    margin-right: 110px;
+}
+
+.burger {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-left: 470px;
+    a {
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    button {
+        border: none;
+        background: #18216d;
+        color: white;
+        border-radius: 6px;
+        padding: 16px 27px 16px 27px;
+        margin-top: 25px;
+        margin-left: 45px;
+        cursor: pointer;
+    }
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    li {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        list-style-type: none;
+        font-size: 18px;
+        margin-right: 40px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+//////////////////////////////////
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    @include xs-block() {
+        margin-top: 45px;
+    }
+    div {
+        &:first-child {
+            margin-right: -140px;
+            @include xs-block() {
+                margin-right: 0;
+            }
+        }
+    }
+    h1 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        height: 120px;
+        width: 498px;
+        color: #18216d;
+        margin: 0;
+        @include xs-block() {
+            font-size: 28px;
+            height: 54px;
+            width: 291px;
+            margin-bottom: 20px;
+        }
+    }
+    p {
+        height: 56px;
+        width: 484px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        color: #18216d;
+        @include xs-block() {
+            height: 56px;
+            width: 280px;
+            font-size: 14px;
+        }
+    }
+    button {
+        border: none;
+        height: 66px;
+        width: 180px;
+        border-radius: 6px;
+        font-size: 17px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        background-color: #00ecd0;
+        color: #18216d;
+        cursor: pointer;
+        @include xs-block() {
+            margin-bottom: 41px;
+        }
+    }
+    @include xs-block() {
+        flex-direction: column;
+        text-align: center;
+        img {
+            width: 350px;
+            margin-left: -80px;
+        }
+    }
+}
+
+///////////////////////////////
+
+.ratings {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 140px;
+    margin-bottom: 52px;
+    @include xs-block() {
+        flex-direction: column;
+        margin-top: 66px;
+        div {
+            &:nth-child(1) {
+                align-items: center;
+
+                justify-content: center;
+            }
+        }
+    }
+    .text {
+        margin-right: -220px;
+        @include xs-block() {
+            margin: auto;
+        }
+    }
+
+    .stars {
+        display: flex;
+        img {
+            &:last-child {
+                margin-left: 93px;
+            }
+        }
+        @include xs-block() {
+            justify-content: space-evenly;
+            align-items: center;
+            img {
+                &:first-child {
+                    width: 122px;
+                }
+                &:last-child {
+                    width: 70px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    h1 {
+        height: 150px;
+        width: 494px;
+        color: #18216d;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        margin: 0;
+        @include xs-block() {
+            height: 90px;
+            width: 330px;
+            font-size: 20px;
+            margin-right: 0;
+        }
+    }
+}
+
+// .companies {
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 130px;
+//     @include xs-block() {
+//         display: none;
+//     }
+// }
+
+.companies {
+    background: url('/img/companies.png') no-repeat;
+    height: 35px;
+    width: 1110px;
+    margin: 0 auto 130px auto;
+    @include xs-block() {
+        background: url('/img/Group 903.png') no-repeat;
+        width: 327px;
+        height: 16px;
+        margin-bottom: 50px;
+    }
+}
+
+//////////////////////////@include
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 48px;
+        color: #18216d;
+        margin-top: 0;
+        margin-bottom: 12px;
+        @include xs-block() {
+            height: 24px;
+            font-size: 24px;
+        }
+    }
+    p {
+        height: 60px;
+        width: 542px;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #18216d;
+        @include xs-block() {
+            height: 40px;
+            width: 335px;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+////////////////////////@include
+
+footer {
+    display: flex;
+    justify-content: center;
+    @include xs-block() {
+        align-items: center;
+    }
+    div {
+        margin-right: 80px;
+        @include xs-block() {
+            margin-right: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #18216d;
+    }
+    p {
+        height: 78px;
+        width: 320px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #18216d;
+        @include xs-block() {
+            margin-bottom: 0;
+        }
+        &:last-child {
+            font-weight: bold;
+            color: #18216d;
+            @include xs-block() {
+                margin-top: 0;
+            }
+        }
+    }
+    @include xs-block() {
+        flex-direction: column;
+        img {
+            height: 48px;
+        }
+    }
+}
